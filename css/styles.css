@@ -229,7 +229,7 @@ body {
     display: block;
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -4px;
     content: '';
     width: 100%;
     height: 4px;
@@ -327,7 +327,9 @@ body {
 
 /* ----------------- ACTIVITY ----------------- */
 .section-activity {
+    padding-top: 0;
     margin-top: 0;
+  
 }
 
 /* работает и без изменения переменной items */
@@ -353,6 +355,10 @@ body {
     border-radius: 0px 0px 4px 4px;
 }
 
+.team-text {
+    margin-bottom: 8px;
+}
+
 .social-link {
     width: 40px;
     height: 40px;
@@ -361,6 +367,8 @@ body {
     justify-content: center;
     background-color: var(--bg-icon-color);
     border-radius: 50%;
+
+    transition: background-color var(--animate-func);
 }
 .social-icon {
     fill: var(--icon-ligth-color);
@@ -419,7 +427,15 @@ fill: var(--accent-icon-color);
 }
 
 .logo {
+    display: block;
+    margin-bottom: 16px;
+    font-family: var(--secondary-font);
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 0.03em;
     line-height: calc(21 / 18);
+
+    color: var(--accent-text-color);
 }
 
 .footer-logo {
@@ -427,7 +443,6 @@ fill: var(--accent-icon-color);
 }
 
 .footer-text {
-    margin-top: 16px;
     max-width: 264px;
     color: var(--footer-text-color);
 }
@@ -530,6 +545,9 @@ background-color: var(--btn-active-color);
 }
 
 .btn-portfolio {
+    min-width: 0px;
+    min-height: 0px;
+
     padding: 12px 24px;
     color: var(--accent-text-color);
     background-color: var(--btn-ligth-color);
@@ -651,6 +669,7 @@ background-color: var(--btn-active-color);
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     /* position: absolute;
     top:24px;
     right: 24px; */
@@ -688,16 +707,18 @@ background-color: var(--btn-active-color);
     text-align: center;
    
     color:var(--secondary-text-color);
-    }
+}
 
-    .modal-form-label{
+.modal-form-label{
+    display: block;
     margin-bottom: 4px;
+
     font-size: 12px;
     line-height: calc(16 / 12);
     letter-spacing: 0.04em;
     color:var(--label-text-color);
 
-    }
+}
     
 .modal-form-wrap {
     position: relative;
